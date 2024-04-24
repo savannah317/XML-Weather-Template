@@ -58,6 +58,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Label();
             this.searchInput = new System.Windows.Forms.TextBox();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // min1
@@ -388,11 +389,25 @@
             this.searchInput.TabIndex = 97;
             this.searchInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // errorLabel
+            // 
+            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorLabel.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.White;
+            this.errorLabel.Location = new System.Drawing.Point(8, 188);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(96, 130);
+            this.errorLabel.TabIndex = 99;
+            this.errorLabel.Text = "Error! City not found. Check your request and please\r\n try again.";
+            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.errorLabel.Visible = false;
+            // 
             // ForecastScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchInput);
             this.Controls.Add(this.img4);
@@ -461,5 +476,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label searchButton;
         private System.Windows.Forms.TextBox searchInput;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

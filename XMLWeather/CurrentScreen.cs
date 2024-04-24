@@ -82,11 +82,21 @@ namespace XMLWeather
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            Form1.city = searchInput.Text;
-            Form1.days.Clear();
-            Form1.ExtractForecast();
-            Form1.ExtractCurrent();
-            DisplayCurrent();
+            try
+            {
+                errorLabel.Visible = false;
+                forecastLabel.Enabled = true;
+                Form1.city = searchInput.Text;
+                Form1.days.Clear();
+                Form1.ExtractForecast();
+                Form1.ExtractCurrent();
+                DisplayCurrent();
+            }
+            catch
+            {
+                errorLabel.Visible = true;
+                forecastLabel.Enabled = false;
+            }
         }
     }
 }

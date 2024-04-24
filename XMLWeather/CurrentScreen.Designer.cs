@@ -44,6 +44,7 @@
             this.currentImg = new System.Windows.Forms.Label();
             this.searchInput = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cityOutput
@@ -226,11 +227,25 @@
             this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
+            // errorLabel
+            // 
+            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorLabel.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.White;
+            this.errorLabel.Location = new System.Drawing.Point(4, 196);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(100, 130);
+            this.errorLabel.TabIndex = 53;
+            this.errorLabel.Text = "Error! City not found. Check your request and please\r\n try again.";
+            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.errorLabel.Visible = false;
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchInput);
             this.Controls.Add(this.humidityLabel);
@@ -271,5 +286,6 @@
         private System.Windows.Forms.Label currentImg;
         private System.Windows.Forms.TextBox searchInput;
         private System.Windows.Forms.Label searchButton;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
